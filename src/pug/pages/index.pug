@@ -27,7 +27,7 @@ block main
     img(src="../../../assets/img/photos/crd-int-01.jpg", alt="Salle de musique du conservatoire")
     header
       h2 Découvrez le Conservatoire, ses enseignements, ses équipes dans un nouveau lieu dédié à la culture artistique.
-      a(href="conservatoire.pug") Plus d'infos
+      +btn("conservatoire.pug", "Plus d'infos")
     div 
       ul 
         li 
@@ -47,7 +47,7 @@ block main
     header 
       h2 Agenda 
       p Lieu de création artistique, le conservatoire propose régulièrement des actions culturelles ouvertes à tous.
-      a(href="agenda.pug") Tous les évènements
+      +btn("agenda.pug", "Tous les évènements")
 
     +card(
       "agenda-musique.jpg",
@@ -74,6 +74,9 @@ block main
       '#'
     )
 
-
-
   section 
+    header 
+      h2 Inscriptions 
+      p Vous êtes désireux d'entrer au conservatoire ? Vous trouverez ici toutes les informations sur les les modalités d'inscriptions.
+    +btn("#", "S'inscrire")
+    +duotone("crd-ext-01.jpg", "facade Est du conservatoire")
