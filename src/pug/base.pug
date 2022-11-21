@@ -1,19 +1,17 @@
+include mixin.pug
+
 doctype html
 html(lang="en")
   head
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Conservatoire Henri Dutilleux
+    block title
   body
-    header 
-      nav 
-        ul
-          li 
-            a(href="/") Accueil
-          li 
-            a(href="conservatoire.pug") Conservatoire
-          li 
-            a(href="agenda.pug") Agenda
+
+    include includes/header.pug
+    
     main
       block main
+
+    include includes/footer.pug

@@ -1,0 +1,13 @@
+mixin card(imgName, imgAlt, title, date, excerpt, link)
+  article.card
+    +duotone(imgName, imgAlt)
+    h3 
+      a(href=`${ link }`)= title
+    div
+      p= date
+      p= excerpt
+      a(href=`${ link }`) Plus d'info
+
+mixin duotone(imgName, imgAlt)
+  picture.duotone
+    img(src=`../../../assets/img/photos/${ imgName }`, alt=`${ imgAlt }`)
