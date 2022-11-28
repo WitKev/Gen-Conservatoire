@@ -4,44 +4,48 @@ block title
   title Conservatoire — Accueil
 
 block main 
-  div
-    h1 Conservatoire Henri Dutilleux 
-    h2 Conservatoire à rayonnement départemental du grand Belfort
-  ul
-    li
-      a(href="#") 
-        include ../../../assets/img/svg/icon_musique.svg
-        | Musique
-    li
-      a(href="#") 
-        include ../../../assets/img/svg/icon_theatre.svg
-        | Théâtre
-    li
-      a(href="#") 
-        include ../../../assets/img/svg/icon_danse.svg
-        | Danse
+  div.hero
+    div.hero__header
+      h1.hero__title Conservatoire Henri Dutilleux 
+      h2.hero__subtitle Conservatoire à rayonnement départemental du grand Belfort
+    ul.hero__chapo.chapo
+      li.chapo__item
+        a.chapo__link(href="#") 
+          include ../../../assets/img/svg/icon_musique.svg
+          | Musique
+      li.chapo__item
+        a.chapo__link(href="#")
+          include ../../../assets/img/svg/icon_theatre.svg
+          | Théâtre
+      li.chapo__item
+        a.chapo__link(href="#")
+          include ../../../assets/img/svg/icon_danse.svg
+          | Danse
 
-  +duotone("agenda-musique-06.jpg", "violoncelles")
+    +duotone("agenda-musique-06", "violoncelles", 2000, 2000, 1000)(class="hero__img")
 
-  section 
-    img(src="../../../assets/img/photos/crd-int-01.jpg", alt="Salle de musique du conservatoire")
-    header
-      h2 Découvrez le Conservatoire, ses enseignements, ses équipes dans un nouveau lieu dédié à la culture artistique.
+  section.crd
+    picture.crd__img
+      source(srcset="../../../assets/img/photos/crd-int-01.jpg?as=avif&width=1000", type="image/avif")
+      source(srcset="../../../assets/img/photos/crd-int-01.jpg?as=webp&width=1000", type="image/webp")
+      img(src="../../../assets/img/photos/crd-int-01.jpg?width=1000", alt="Salle de musique du conservatoire")
+    header.crd__header
+      h2.crd__title Découvrez le Conservatoire, ses enseignements, ses équipes dans un nouveau lieu dédié à la culture artistique.
       +btn("conservatoire.pug", "Plus d'infos")
-    div 
-      ul 
-        li 
-          span 9
-          span sites
-        li 
-          span 84
-          span enseignements
-        li 
-          span 1500
-          span élèves
-        li 
-          span 50
-          span disciplines
+    div.crd__stats.stats
+      ul.stats__list
+        li.stats__item
+          span.stats__nb 9
+          span.stats__text sites
+        li.stats__item
+          span.stats__nb 84
+          span.stats__text enseignements
+        li.stats__item 
+          span.stats__nb 1500
+          span.stats__text élèves
+        li.stats__item 
+          span.stats__nb 50
+          span.stats__text disciplines
 
   section 
     header 
@@ -50,7 +54,7 @@ block main
       +btn("agenda.pug", "Tous les évènements")
 
     +card(
-      "agenda-musique.jpg",
+      "agenda-musique",
       "description image",
       "Concert d'ouverture",
       "15 mars à 20h30",
@@ -58,7 +62,7 @@ block main
       '#'
     )
     +card(
-      "agenda-theatre.jpg",
+      "agenda-theatre",
       "description image",
       "Le malade imaginaire",
       "21 mars à 20h30",
@@ -66,7 +70,7 @@ block main
       '#'
     )
     +card(
-      "agenda-danse.jpg",
+      "agenda-danse",
       "description image",
       "Concerto pour violons",
       "15 avril à 20h30",
@@ -79,4 +83,4 @@ block main
       h2 Inscriptions 
       p Vous êtes désireux d'entrer au conservatoire ? Vous trouverez ici toutes les informations sur les les modalités d'inscriptions.
     +btn("#", "S'inscrire")
-    +duotone("crd-ext-01.jpg", "facade Est du conservatoire")
+    +duotone("crd-ext-01", "facade Est du conservatoire", 2000, 2000, 1000)
