@@ -3,11 +3,12 @@
 
   &__header {
     color: map-get($colors , lightColor);
+    align-self: end;
   }
 
   &__subtitle {
     text-transform: uppercase;
-    font-size: rem(13);
+    @include fluid-type($small);
     letter-spacing: rem(1);
   }
 
