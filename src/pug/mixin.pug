@@ -1,5 +1,5 @@
 mixin card(imgName, imgAlt, title, date, excerpt, link)
-  article.card
+  article(class!=attributes.class).card
     +duotone(imgName, imgAlt, 800, 384, 250)(class="card__img")
     h3.card__title
       a.card__titleLink(href=`${ link }`)= title

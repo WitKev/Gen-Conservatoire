@@ -8,6 +8,9 @@
   &__header {
     color: map-get($colors , lightColor);
     align-self: end;
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 1 / span 9;
+    }
   }
 
   &__subtitle {
@@ -29,6 +32,11 @@
     margin-left: -#{map-get($spaces, s )};
     margin-right: -#{map-get($spaces, s )};
     padding: 0 map-get($spaces, s );
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 1 / span 9;
+      margin: 0;
+      padding: 0;
+    }
   }
 
   &__text {

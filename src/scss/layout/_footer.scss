@@ -9,8 +9,33 @@
     text-decoration: none;
   }
 
-  & > div svg path {
+  &__logo {
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 1 / span 4;
+    }
+  }
+
+  & > div:not(.footer__logo) svg path {
     fill: map-get($colors , lightColor);
+  }
+
+  &__menu {
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 7 / span 3;
+    }
+  }
+
+  &__contact {
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 10 / span 3;
+    }
+  }
+
+  &__social {
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 10 / span 3;
+      grid-row: 2 / span 1;
+    }
   }
 
   &__list {
@@ -27,6 +52,13 @@
   &__address {
     p {
       margin: 0;
+    }
+  }
+
+  &__gb {
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 7 / span 3;
+      grid-row: 2 / span 1;
     }
   }
 

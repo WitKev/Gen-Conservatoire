@@ -69,3 +69,13 @@ $display-1: (
   min: 48px,
   max: 64px
 );
+
+// Grille
+$nbCol : 12;
+$gutter: map-get($spaces, m);
+$marginPage: map-get($spaces, s);
+
+// Dimension du conteneur
+$container: calc(#{ map-get($bp, lg) } - #{$marginPage} * 2);
+$colMin: 0;
+$colMax: calc( ( #{$container} - #{$gutter} * (#{$nbCol} - 1) ) / #{$nbCol} );

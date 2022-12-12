@@ -1,7 +1,21 @@
 .section {
   position: relative;
 
+  @media (min-width: map-get($bp, sm)) {
+    &:has(header)::before {
+      content: "";
+      grid-column: 1 / span 2;
+      background-color: map-get($colors, darkColor);
+      height: 1px;
+      margin-top: rem(54);
+    }
+  }
 
+  &__header {
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 3 / span 6;
+    }
+  }
   &__title {
     @include fluid-type($heading-1);
     line-height: 1.1;
@@ -11,6 +25,20 @@
   &__intro {
     @include fluid-type($excerpt);
     line-height: 1.5;
+  }
+
+  &__link {
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: 9 / span 4;
+      justify-self: end;
+      align-self: flex-start;
+    }
+  }
+
+  &__card {
+    @media (min-width: map-get($bp, sm)) {
+      grid-column: span 4;
+    }
   }
 
   &__img {
@@ -34,6 +62,9 @@
   &.-bg {
     padding-top: 160px;
     padding-bottom: 160px;
+    &:has(header)::before {
+      background-color: map-get($colors, lightColor);
+    }
   }
 
 }

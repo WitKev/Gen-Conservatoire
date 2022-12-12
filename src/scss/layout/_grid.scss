@@ -2,5 +2,17 @@
 
   padding-left: map-get($spaces, s );
   padding-right: map-get($spaces, s );
+
+  @media (min-width: map-get($bp, md)) {
+    display: grid;
+    gap: map-get($spaces, m );
+    
+    // grid-auto-flow indique le fonctionnement de l'algorithme de placement automatique et
+		// détaille comment les éléments placés automatiquement « coulent » dans la grille.
+		// Avec la valeur "dense" l'algorithme utilisera une méthode de « regroupement dense »
+    // où il essaie de remplir les trous dans la grille si des éléments plus petits arrivent ensuite.
+    grid: auto-flow dense / repeat( #{$nbCol}, minmax( #{$colMin}, #{$colMax} ) );
+    justify-content: center;
+  }
   
 }
