@@ -42,7 +42,7 @@
     @media (min-width: map-get($bp, sm)) {
       grid-column: 5 / span 7;
       grid-row: 1 / span 1;
-      background: map-get($colors, lightColor ) url(/assets/img/svg/pattern.svg) no-repeat;
+      background: map-get($colors, lightColor ) url(../../assets/img/svg/pattern.svg) no-repeat;
       background-position: center right;
       z-index: 1;
     }

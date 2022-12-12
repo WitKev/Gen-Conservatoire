@@ -3,19 +3,30 @@
   top: 0;
   left: 0;
   width: 100%;
+  min-height: 80px;
   z-index: 2;
   background-color: map-get($colors, lightColor);
   display: flex;
   justify-content: space-between;
-  padding: map-get($spaces , xs ) map-get($spaces , s );
+  padding: 0 map-get($spaces , s );
+
+  @media (min-width: map-get($bp, md)) {
+    background-color: map-get($colors, lightColor);
+    padding-right: 0;
+  }
 
   &__start,
   &__end {
     display: flex;
+  }
+  &__start {
     align-items: center;
   }
   &__end {
     flex-direction: row-reverse;
+    @media (min-width: map-get($bp, md)) {
+      flex-direction: row;
+    }
   }
 
   &__search {
@@ -29,6 +40,9 @@
       width: 50px;
       height: 50px;
       display: block;
+      @media (min-width: map-get($bp, md)) {
+        border: 1px solid map-get($colors, darkColor);
+      }
     }
   }
 }

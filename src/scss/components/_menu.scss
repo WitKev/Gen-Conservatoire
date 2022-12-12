@@ -15,7 +15,11 @@
     height: 100vh;
     background-color: map-get($colors, 'primary');
     @include fluid-type($excerpt);
-    transition: all .5s ease-in-out;
+    line-height: 1.5;
+    font-weight: 300;
+    text-transform: inherit;
+    opacity: 0;
+    transition: all .4s ease-in-out;
   }
 
   &__list {
@@ -51,14 +55,29 @@
         height: 5px;
       }
     }
+    &--btn {
+      @media (min-width: map-get($bp, md)) {
+        background-color: map-get($colors, darkColor );
+        margin-left: 24px;
+      }
+    }
   }
 
   &__link{
     color: map-get($colors, 'lightColor' );
-    text-decoration: none;
+    display: flex;
+    align-items: center;
     padding: 5px 20px;
+    text-decoration: none;
     @media (min-width: map-get($bp, md)) {
       color: map-get($colors, darkColor );
+    }
+    .menu__item--btn & {
+      color: map-get($colors, lightColor );
+      @media (min-width: map-get($bp, md)) {
+        padding-left: 40px;
+        padding-right: 40px;
+      }
     }
   }
 
@@ -74,8 +93,13 @@
 
 .menuBurger {
   width: 30px;
-  height: 30px;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (min-width: map-get($bp, md)) {
+    display: none;
+  }
 
   &__bar,
   &__bar::before,
