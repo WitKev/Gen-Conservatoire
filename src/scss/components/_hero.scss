@@ -44,4 +44,27 @@
     line-height: 1.5;
   }
 
+  &__patterns {
+    opacity: 0.4;
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end;
+    align-items: start;
+    svg {
+      margin-top: -5vw;
+      margin-top: 15vh;
+      width: 80vmax;
+    }
+  }
+
+}
+
+.curveLines path {
+  stroke: map-get($colors, secondary);
+  fill: none;
+  stroke-linejoin: round;
+  stroke-width: map-get($spaces, s);
 }

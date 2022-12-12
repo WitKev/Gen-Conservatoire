@@ -1,3 +1,6 @@
+import Headroom from "headroom.js";
+import gsap from "gsap";
+
 /*------------------------------------*\
   # AFFICHAGE DU MENU POUR LE MOBILE
 \*------------------------------------*/
@@ -16,3 +19,19 @@ function doToggle() {
 
 // La fonction doToggle() est appelé lorsqu'on clique sur l'icone de menu
 hamburger.addEventListener('click', doToggle);
+
+/*------------------------------------*\
+  # INIT HEADROOM
+\*------------------------------------*/
+const navBar = document.querySelector(".headroom");
+const headroom = new Headroom(navBar, {
+  offset: 205,
+});
+headroom.init();
+
+/*------------------------------------*\
+  # ANIMATIONS PATTERN
+\*------------------------------------*/
+
+const lines = document.querySelectorAll(".curveLines path");
+const i = 0;

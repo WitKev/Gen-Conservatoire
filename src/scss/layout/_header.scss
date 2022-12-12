@@ -5,11 +5,13 @@
   width: 100%;
   min-height: 80px;
   z-index: 2;
-  background-color: map-get($colors, lightColor);
   display: flex;
   justify-content: space-between;
   padding: 0 map-get($spaces , s );
-
+  
+  &.headroom--not-top {
+    background-color: map-get($colors, lightColor);
+  }
   @media (min-width: map-get($bp, md)) {
     background-color: map-get($colors, lightColor);
     padding-right: 0;
@@ -45,4 +47,14 @@
       }
     }
   }
+}
+
+.headroom {
+  transition: transform 200ms linear;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
 }
